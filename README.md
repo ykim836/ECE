@@ -42,8 +42,7 @@ Based on the features from quality deviations, it should filter the incorrectly 
 >At the last layer, the dropout layer was added.
 >
 >5. Train and Test with model  
->Using the Adam optimizer, the model was trained with a learning rate of 0.000001.  
->The 500 epochs was performed.
+>Using the Adam optimizer, the model was trained with a learning rate of 0.000001. The 500 epochs was performed.  
 >
 >6. Result discussion. 
 >From the model fit, the loss and accuracy of each train and validation dataset learning results were obtained.  
