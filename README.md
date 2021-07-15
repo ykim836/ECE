@@ -23,7 +23,7 @@ Based on the features from quality deviations, it should filter the incorrectly 
 >1. Load the data  
 >The images of the original file should be accumulated into a dataset.  
 >First, original images were assigned with paths, and then, saved as a type of array.  
->get_data function loads the data into the dataset, convert images format with BGR to RGB and resize the images to all identical sizes.  
+>get_data function loads the data into dataset, convert images format with BGR to RGB and resize the images to all identical sizes.  
 >
 >2. Check the number of images in both classes & Visualize random images  
 >Using the for loop, the number of images of both classes in train and validation files was checked.  
@@ -44,7 +44,7 @@ Based on the features from quality deviations, it should filter the incorrectly 
 >5. Train and Test with model  
 >Using the Adam optimizer, the model was trained with a learning rate of 0.000001. The 500 epochs were performed.  
 >
->6. Result discussion.  
+>6. Result discussion  
 >From the model fit, the loss and accuracy of each train and validation dataset learning results were obtained.  
 >Using teh classification_report, the final chart of loss and accuracy could be inspected.
 
