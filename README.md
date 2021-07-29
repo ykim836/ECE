@@ -50,6 +50,6 @@ Based on the features from quality deviations, it should filter the incorrectly 
 
 ## Note
 >The code file is "post_welding_code.py".  
->The small dataset "two_class_post_Weld.zip" can be downloaded in this repository.  
+>The small dataset "two_class_post_weld.zip" can be downloaded in this repository.  
 >After download it, please change the code lines, which are paths to the both train and test folders.  
 >Using your GoogleColaboratory, this program can be finished in 30 seconds.  
