@@ -46,7 +46,7 @@ Based on the features from quality deviations, it should filter the incorrectly 
 >
 >6. Result discussion  
 >From the model fit, the loss and accuracy of each train and validation dataset learning results were obtained.  
->Using teh classification_report, the final chart of loss and accuracy could be inspected.
+>Using the classification_report, the final chart of loss and accuracy could be inspected.
 
 ## Note
 >The code file is "post_welding_code.py".  
