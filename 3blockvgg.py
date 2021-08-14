@@ -24,7 +24,7 @@ def get_data(data_dir):
                 print(e)
     return np.array(data)
 
-dataset = get_data('/content/drive/MyDrive/combined_dataset') ## define current path to the original dataset folder
+dataset = get_data('../two_class_post_weld') ## define current path to the original dataset folder
 
 from sklearn.model_selection import train_test_split
 train, val = train_test_split(dataset, test_size=1/3)
