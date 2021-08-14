@@ -13,7 +13,7 @@ Based on the features from quality deviations, it should filter the incorrectly 
 This helps to detect weld failures before they get further processed inline.
 <img src = "https://user-images.githubusercontent.com/81494108/125701722-8d3ea349-a118-475f-9029-b57957a577d6.png" width="70%" height="70%">  
 
-## Small Data analysis
+## Small Dataset analysis
 >The data file has two data files, which are train and test files.  
 >In the train file, 18 images exist in each normally and abnormally welding file. In the test file, 9 images exist in each case.  
 
