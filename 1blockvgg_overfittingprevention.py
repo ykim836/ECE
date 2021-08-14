@@ -24,8 +24,10 @@ def get_data(data_dir):
                 print(e)
     return np.array(data)
 
-train = get_data('/content/drive/MyDrive/two_class_post_weld/train') ## define current path to the train folder
-val = get_data('/content/drive/MyDrive/two_class_post_weld/test') ## define current path to the test folder
+dataset = get_data('../two_class_post_weld') ## define current path to the original dataset folder
+
+from sklearn.model_selection import train_test_split
+train, val = train_test_split(dataset, test_size=1/3)
 
 ### Compare the number of the images in both cases ###
 
