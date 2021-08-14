@@ -65,7 +65,7 @@ This helps to detect weld failures before they get further processed inline.
 >The L2 regularization adds a penalty when the model complexity increases.  
 >The regularization parameter, lambda, penalizes all the parameters except intercept so that the model generalizes the data without overfitting.  
 
-## Note  
+## Note_Instruction  
 >You can see more details in the "final_project_report_YeongeunKim.pdf".  
 >The small dataset "two_class_post_weld.zip" can be downloaded in this repository.  
 >After download it, please change the code lines, which are paths to the original dataset folder.  
@@ -73,6 +73,7 @@ This helps to detect weld failures before they get further processed inline.
 >With VGG blocks applied, the code files are "1blockvgg.py" and "3blockvgg.py".  
 >With the overfitting prevention methods, the code files are "baseline_overfittingprevention.py",  
 >"1blockvgg_overfittingprevention.py" and "3blockvgg_overfittingprevention.py".  
+>You can download each python file and run in your GoogleColaboratory with GPU.  
 
 ## References  
 >https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/  
