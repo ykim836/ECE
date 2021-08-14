@@ -73,3 +73,9 @@ This helps to detect weld failures before they get further processed inline.
 >With VGG blocks applied, the code files are "1blockvgg.py" and "3blockvgg.py".  
 >With the overfitting prevention methods, the code files are "baseline_overfittingprevention.py",  
 >"1blockvgg_overfittingprevention.py" and "3blockvgg_overfittingprevention.py".  
+
+## References  
+>https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/  
+>https://machinelearningmastery.com/how-to-implement-major-architecture-innovations-for-convolutional-neural-networks/  
+>https://machinelearningmastery.com/how-to-accelerate-learning-of-deep-neural-networks-with-batch-normalization/  
+>https://towardsdatascience.com/intuitions-on-l1-and-l2-regularisation-235f2db4c261  
