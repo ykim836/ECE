@@ -24,8 +24,8 @@ def get_data(data_dir):
                 print(e)
     return np.array(data)
 
-train = get_data('/content/drive/MyDrive/two_class_post_weld/train') ## define current path to the train folder
-val = get_data('/content/drive/MyDrive/two_class_post_weld/test') ## define current path to the test folder
+train = get_data('../two_class_post_weld/train') ## define current path to the train folder
+val = get_data('../two_class_post_weld/test') ## define current path to the test folder
 
 ### Compare the number of the images in both cases ###
 
