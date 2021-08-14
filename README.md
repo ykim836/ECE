@@ -20,7 +20,6 @@ This helps to detect weld failures before they get further processed inline.
 ## Code analysis
 
 >### Base-Line model  
-
 >1. Load the data  
 >The images of the original file should be accumulated into a dataset.  
 >First, original images were assigned with paths, and then, saved as a type of array.  
@@ -58,14 +57,14 @@ This helps to detect weld failures before they get further processed inline.
 >
 >Applying the VGG blocks, 1 VGG block model and 3 VGG blocks model were achieved.
 >The 1 VGG block model has 1 VGG block which contains two convolutional layers and one max-pooling layer.  
->The 3 VGG blocks model has 3 VGG blocks and each block has different number of kernels in the convolutional layers.
->
+>The 3 VGG blocks model has 3 VGG blocks and each block has different number of kernels in the convolutional layers.  
+
 >### VGG blocks with overfitting prevention models  
 >The batch normalization is a technique designed to automatically standardize inputs to alayer in deep learning neural network.
 >This batch normalization layer is located between the convolutional layer and the following max-pooling layer.  
 >The L2 regularization adds a penalty when the model complexity increases.  
->The regularization parameter, lambda, penalizes all the parameters except intercept so that the model generalizes the data without overfitting.
->
+>The regularization parameter, lambda, penalizes all the parameters except intercept so that the model generalizes the data without overfitting.  
+
 ## Note  
 >You can see more details in the "final_project_report_YeongeunKim.pdf".  
 >The small dataset "two_class_post_weld.zip" can be downloaded in this repository.  
