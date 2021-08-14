@@ -71,4 +71,5 @@ This helps to detect weld failures before they get further processed inline.
 >After download it, please change the code lines, which are paths to the original dataset folder.  
 >For the Base-Line model, the code file is "baseline.py".  
 >With VGG blocks applied, the code files are "1blockvgg.py" and "3blockvgg.py".  
->With the overfitting prevention methods, the code files are "baseline_overfittingprevention.py", "1blockvgg_overfittingprevention.py" and "3blockvgg_overfittingprevention.py".  
+>With the overfitting prevention methods, the code files are "baseline_overfittingprevention.py",  
+>"1blockvgg_overfittingprevention.py" and "3blockvgg_overfittingprevention.py".  
