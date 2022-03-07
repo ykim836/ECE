@@ -1,10 +1,11 @@
+
+# Borrowed "get_data" function from
+# https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/
+
 ### Load the data ###
 
 labels = ['normal','abnormal']
 image_size = 224
-
-# Borrowed "get_data" function from
-# https://www.analyticsvidhya.com/blog/2020/10/create-image-classification-model-python-keras/
 
 import os 
 import cv2 
@@ -27,7 +28,8 @@ def get_data(data_dir):
 dataset = get_data('../two_class_post_weld') ## define current path to the original dataset folder
 
 from sklearn.model_selection import train_test_split
-train, val = train_test_split(dataset, test_size=1/3)
+train, test = train_test_split(dataset, test_size=1/3)
+train, val = train_test_split(train, test_size=1/3)
 
 ### Compare the number of the images in both cases ###
 
@@ -43,14 +45,14 @@ for i in train:
 sns.set_style('whitegrid')
 sns.countplot(count_number)
 
-### Visualize a random image from both classes ###
+### Visualize a random image from both cases ###
 
 import matplotlib.pyplot as plt
 
 # visualize a normal welding image
 plt.figure(figsize = (5,5))
 plt.imshow(train[1][0])
-plt.title(labels[train[0][1]])
+plt.title(labels[train[1][1]])
 
 # visualize a abnormal welding image
 plt.figure(figsize = (5,5))
@@ -63,12 +65,18 @@ plt.title(labels[train[-1][1]])
 
 x_train = []
 y_train = []
+x_test = []
+y_test = []
 x_val = []
 y_val = []
 
 for feature, label in train:
     x_train.append(feature)
     y_train.append(label)
+
+for feature, label in test:
+    x_test.append(feature)
+    y_test.append(label)
 
 for feature, label in val:
     x_val.append(feature)
@@ -79,10 +87,14 @@ for feature, label in val:
 import numpy as np
 
 x_train = np.array(x_train) / 255
+x_test = np.array(x_test) / 255
 x_val = np.array(x_val) / 255
 
 x_train.reshape(-1, image_size, image_size, 1)
 y_train = np.array(y_train)
+
+x_test.reshape(-1, image_size, image_size, 1)
+y_test = np.array(y_test)
 
 x_val.reshape(-1, image_size, image_size,1)
 y_val = np.array(y_val)
@@ -132,9 +144,8 @@ model.summary()
 ### Evaluate the results ###
 
 import tensorflow as tf
-from keras.optimizers import SGD, Adam
-
-opt = Adam(lr=0.000001)
+from keras.optimizers import adam_v2
+opt = adam_v2.Adam(lr=0.000001)
 model.compile(optimizer=opt, loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True), metrics=['accuracy'])
 
 history = model.fit(x_train, y_train, epochs=500, validation_data=(x_val,y_val))
@@ -162,6 +173,6 @@ plt.show()
 
 from sklearn.metrics import classification_report
 
-predictions = model.predict_classes(x_val)
+predictions = (model.predict(x_test) > 0.5).astype("int32")
 predictions = predictions.reshape(1,-1)[0]
-print(classification_report(y_val, predictions, target_names = ['normal welding (Class 0)','abnormal welding(Class 1)']))
+print(classification_report(y_test, predictions, target_names = ['normal welding (Class 0)','abnormal welding(Class 1)']))
